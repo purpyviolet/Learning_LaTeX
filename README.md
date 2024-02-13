@@ -1,5 +1,6 @@
 # Learning_LaTeX
-包括基本latex使用方法以及代码，但是不包括安装环境
+包括基本latex使用方法以及代码
+本学习使用texwork+vscode配置环境
 
 ## 参考视频
 https://www.bilibili.com/video/BV15x411j7k6/
