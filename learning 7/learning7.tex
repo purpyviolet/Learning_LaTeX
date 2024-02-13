@@ -1,0 +1,55 @@
+% 浮动体环境
+\documentclass{ctexart}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+\begin{document}
+
+
+    \LaTeX{}中的插图(cute gura)见图\ref{gurafig}：
+    \begin{figure}[htbp] % figure浮动体环境
+        \centering 
+        \includegraphics[scale=0.1]{gura}
+        \caption{\TeX \ cute gura}\label{gurafig}
+    \end{figure}
+
+
+    在\LaTeX{}中的表格见图\ref{table1}：
+
+    \begin{table}[htbp]
+        \centering 
+        \caption{\TeX \ Table 1}\label{table1}
+        \begin{tabular}{| l || c | c | c | r |} % 如果要产生竖线则在之间加入|，基本上收尾都加|，确保表格被包裹
+            \hline % \hline命令用于产生表格横线
+            name & age & grade & height & weight \\  
+            \hline \hline %可添加一条横线
+            zowie & 19 & 100 & 175 & 55 \\
+            \hline
+            alice & 19 & 100 & 160 & 50 \\
+            \hline
+            fione & 25 & 100 & 160 & 50 \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+
+\end{document}
+
+
+% 首先可以用浮动体来设置图片以及表格的排版位置以及标题和交叉引用等
+% 有figure和table两种浮动体
+% 在[]内可以设置允许位置参数
+% 有以下几种
+% h在此处
+% t在页顶
+% b在页底
+% p独立一页
+
+% 根据需要添加字母组合即可（默认tbp）
+
+% 最重要的居中用\centering
+% 标题设置用\caption{图片或者表格标题}，这里会自带图片或者表格序号
+% 如果要加交叉引用，则在后面添加\label{xxx}，然后回到文章内添加\ref{xxx},本质上这二者就是图片或者表格的序号
+
+% 如果要实现并排图片或者子图表排版则用subcaption等宏包
+

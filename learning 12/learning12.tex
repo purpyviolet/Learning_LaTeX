@@ -1,0 +1,29 @@
+\documentclass{ctexart}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\newcommand\ME{$\mathbb{PURPY} \ \mathbb{VIOLET}$}
+
+\newcommand\likes[2]{#1 喜欢 #2} % 这里#用来代表第几个参数
+\newcommand\love[3][喜欢]{#2 #1 #3} 
+
+\renewcommand\abstractname{简介} % 使用renewcommand命令来重载一个命令
+
+% 也可以用来定义和重定义新环境
+% \newenvironment*{envname}[args][default]{begdef}{enddef}
+% \renewenvironment*{envname}[args][default]{begdef}{enddef}
+
+\begin{document}
+    \ME
+
+
+    \likes{我}{你}
+
+    \love{我}{你} % 这里的中间值#1选取了默认值喜欢
+
+    \love[爱]{我}{你} % 这里的中间值#1选取了传入值爱
+
+    \begin{abstract}
+        这是一段摘要
+    \end{abstract}
+
+\end{document}

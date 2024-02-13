@@ -1,0 +1,123 @@
+\documentclass{ctexart}
+\usepackage{amsmath}
+\begin{document}
+    $
+    \begin{matrix}% 注意这里需要加$，其实矩阵本质上也是公式，不能漏了$
+        1 & 0 \\
+        0 & 1
+    \end{matrix} % matrix环境本身不包括任何括号，只有数字
+    $
+
+    $
+    \begin{pmatrix}% pmatrix用于在矩阵两端加上小括号
+        2 & i \\
+        3 & 5
+    \end{pmatrix}
+    $
+
+    $
+    \begin{bmatrix}% bmatrix用于在矩阵两端加上中括号 
+        8 & i \\
+        3 & 678
+    \end{bmatrix} % 最常用！！！
+    $
+
+    $
+    \begin{Bmatrix}% Bmatrix用于在矩阵两端加上大括号
+        8 & i & t\\
+        33 & 678 & y
+    \end{Bmatrix}
+    $
+
+    $
+    \begin{vmatrix}% vmatrix用于在矩阵两端加上绝对值，在矩阵中也就是判别式
+        8 & -5i \\
+        3 & 68
+    \end{vmatrix}
+    $
+
+    $
+    \begin{Vmatrix}% Vmatrix用于在矩阵两端加上‖
+        2 & -5i \\
+        -i & 64
+    \end{Vmatrix}
+    $
+
+    % 使用上下角标以及参数接收
+    $
+    B = \begin{bmatrix}
+        2 & 45 & b_{23} \\
+        34 & a_{4} & b_{1} \\
+        23 & 90 & 3
+    \end{bmatrix}
+    $
+
+    % 常用省略号：\dots、\vdots、\ddots
+    % \dots即为正常横向省略号，\vdots即为vertical竖直省略号，\ddots即为斜着的省略号
+    % 这里与\cdot区分，没有s的只是单个点，\cdots与\dots在使用上没有什么不一样
+    $
+    A = \begin{pmatrix}
+        a_{1} & \dots & a_{1n} \\
+        & \ddots & \vdots \\
+        0 & & a_{nn}
+    \end{pmatrix}_{n \times n} % 这里可以把矩阵本身也看成是一个式子，进行操作
+    $
+
+    % 分块矩阵
+    $
+    \begin{pmatrix}
+        \begin{matrix} 
+            1 & 0 \\
+            0 & 1
+        \end{matrix} & \text{\Large 0}\\
+        \text{\Large 0} & 
+        \begin{matrix}
+            1 & 0\\
+            0 & -1
+        \end{matrix}
+    \end{pmatrix}
+    $
+
+    % 三角矩阵
+    $
+    \begin{pmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n} \\
+        & a_{22} & \cdots & a_{2n} \\
+        &      & \ddots & \vdots \\
+        \multicolumn{2}{c}{\raisebox{1.3ex}[0pt]{\Huge 0}} % 2为两列，c为居中
+        &      & a_{nn}
+    \end{pmatrix}
+    $
+
+    % 跨列用省略号 \hdotsfor{columns}
+    $
+    \begin{bmatrix}
+        2 & 45 & b_{23} \\
+        34 & a_{4} & b_{1} \\
+        \hdotsfor{3} \\
+        23 & 90 & 3
+    \end{bmatrix}
+    $
+
+    % 行内小矩阵用smallmatrix环境来实现，但是需要手动添加左右括号
+    复数$z = (x,y)$也可以用矩阵
+    \begin{math}
+        \left (
+            \begin{smallmatrix}
+                x & y \\
+                y & x
+            \end{smallmatrix}
+        \right )
+    \end{math}
+    来表示。
+
+    % 用array环境来排版(与tabular相似)
+    $
+    \begin{array}{r|r}
+        \frac12 & 0 \\ % 这里直接跟了12两个字符，系统默认为{1}{2}
+        \hline 
+        0 & -\frac abc \\
+    \end{array}
+    $
+\end{document}
+

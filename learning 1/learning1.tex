@@ -1,0 +1,58 @@
+% 导言区
+\documentclass{article} %或者可以是book, ctexart, report, letter等等类
+% “%”为注释符号
+
+% 用\title{title}可以为文章加上标题
+\title{\heiti How to learn LaTeX part 1}% 当然如果你要修改字体的话就在前面加上"\字体名称" 就行，后面接一个空格分隔开来
+% 用\author{name}可以为文章加上作者
+\author{purpy violet}
+% 用\date{date}可以为文章加上日期
+% 其中\date{\today}则代表今天的日期
+\date{\today}
+
+% 关于在文章中使用中文，我们需要引用一个宏包，即为\usepackage指令，宏包名字为ctex
+\usepackage{ctex} %当然如果你想一步到位你可以直接使用ctexart文章类就行，就不用写这个了    
+% 同时需要注意编码格式为UTF-8，排版为XeLaTeX
+
+% 这里可以引用一些新的指令，比如说后面用到的弧度的组合公式表达，这边提前定义一下后面就省了很多事了，语法为\newcommand\新表达名称{旧的组合表达}
+\newcommand\degree{^\circ}
+
+% 当然要注意了，你在导言区定义了标题，作者和日期
+% 可是它们并没有被print出来，你需要在下面正文区才能调用显示它们
+
+
+
+
+% 正文区
+\begin{document} %{}内为环境名称，一般设置为document。一个LaTeX文件中只能有一个document环境
+		% 在这里用\maketitle指令打印出标题日期等信息
+		% 注意在letter类中没有这个指令哦
+		\maketitle
+		%注意没有\makedate或者\makeauthor等指令，你只要maketitle就可以把日期作者什么的一起打印出来了
+
+		Hello World!
+
+		%关于换行操作的话就直接在这边空一行就行，当然不可以是注释行，要纯空白的
+		%两个$之间塞数学公式就不用多说了，四个$就是单独占用一行的数学公式
+		Let $f(x)$ be defined by the formula 
+		$$f(x) = 3x^2 + x - 1$$ which is a polynomial of %这也代表着在代码区换行并不会导致打印出来的文章会换行，of 后面接着degree 2一起连着输出。
+		degree 2. 
+
+% 以下为中文部分的显示
+
+接受一个人就接受她的全部。美好的，惨痛的，幸福的，痛苦的······一切的一切，都要全盘接受……就和做卷子一样，不能只做想做的题。只要你拿起一张卷子，就要从头到尾把它做完。
+%我知道你每次看到代码区没有自动缩进会很难受，但是这并不影响lol
+
+
+勾股定理可以用符号语言表述为：设直角三角形$ABC$,其中$\angle C =90^\circ$，则有：%\circ代表数学中的“°”
+
+
+
+
+\begin{equation} %特别注意这里的公式写法，我们引用了\begin{equation}和\end{equation}，这样子生成的公式会自动生成一个公式编号
+AB^2 = BC^2 + AC^2 
+\end{equation}
+
+这里关于公式的引用也涉及到一些像是函数重载之类的操作，比如像是上面的$\angle C =90^\circ$，其中$^\circ$代表上角标的°，但是打起来比较麻烦，所以说我们可以定义一个新指令来代替$^\circ$，在导言区加入新指令的声明，可以方便很多。
+
+\end{document}

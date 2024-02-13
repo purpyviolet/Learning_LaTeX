@@ -1,0 +1,50 @@
+\documentclass{ctexart}
+
+
+
+% 正文区
+\begin{document}
+    
+    % 在latex环境中用tabular环境来生成表格，相当于是内置区域
+    \begin{tabular}{l c c c r} % 后面 l 代表向左对齐，c代表居中，r代表向右对齐
+        name & age & grade & height & weight \\  % 每一列之间用&符号区分，相当于是表头，最后\\用于结束这一行继续下一行编写
+        zowie & 19 & 100 & 175 & 55 \\
+        alice & 19 & 100 & 160 & 50 \\
+        fione & 25 & 100 & 160 & 50 \\
+
+
+    \end{tabular}
+
+
+
+
+
+
+    \begin{tabular}{| l || c | c | c | r |} % 如果要产生竖线则在之间加入|，基本上收尾都加|，确保表格被包裹
+        \hline % \hline命令用于产生表格横线
+        name & age & grade & height & weight \\  
+        \hline \hline %可添加一条横线
+        zowie & 19 & 100 & 175 & 55 \\
+        \hline
+        alice & 19 & 100 & 160 & 50 \\
+        \hline
+        fione & 25 & 100 & 160 & 50 \\
+        \hline
+    \end{tabular}
+
+
+    \begin{tabular}{| l || c | c | c | r |p{2cm}} % p{xcm}用于规定本列表格的宽度，当内容超过宽度时自动填充，能自动换行
+        \hline % \hline命令用于产生表格横线
+        name & age & grade & height & weight \\  
+        \hline \hline %可添加一条横线
+        zowie & 19 & 100 & 175 & 55 \\
+        \hline
+        alice & 19 & 100 & 160 & 50 \\
+        \hline
+        fione & 25 & 100 & 160 & 50 \\
+        \hline
+    \end{tabular}
+
+
+
+\end{document}

@@ -1,0 +1,44 @@
+\documentclass{ctexart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+    \begin{gather}
+        a + b = b + a \\ % 自动带编号
+        ab = ba
+    \end{gather}
+
+    \begin{gather*} % 有*号不加上编号
+        a + b = b + a \\ 
+        ab = ba
+    \end{gather*}
+
+    \begin{gather}
+        a + b = b + a  \notag\\  % 手动取消编号
+        ab = ba 
+    \end{gather}
+
+    \begin{align} % 规定在&位置上下对齐
+        S &= b + a \\ % 自动带编号
+        X &= ba
+    \end{align}
+
+
+    % 组合公式（带推导过程）
+    \begin{equation}
+        \begin{split}
+            \cos 2x &= \cos^2 x - \sin^2 x \\
+            &= 2\cos^2 x - 1
+        \end{split}
+    \end{equation}
+
+    % cases环境，用于处理分段函数类似情况
+    \begin{equation}
+        D(x) = \begin{cases}
+            1, & \text{if} \ x \in \mathbb{Q}; \\
+            0, & \text{if} \ x \in \mathbb{R} \setminus \mathbb{Q}
+        \end{cases}
+    \end{equation}
+\end{document}
+

@@ -1,0 +1,145 @@
+% 导言区
+\documentclass{article}
+
+\usepackage{ctex}%中文处理宏包
+% \usepackage{xltxtra}
+
+% 正文区（文稿区）
+\begin{document}
+    \section{空白符号}
+    Hello Here is       purpy violet!
+    %这里注意不管你中间添加了多少空格，都是正常显示一个空格
+
+    你好这里是purpy violet正在说话！
+    %中文与其他字符混合的话，具体看编译器，可能会自动添加空格，可能不会
+
+    你好这里是      坡儿皮薇尔莉特！
+    %中文字符之间不管添加多少空格都是默认没有空格
+
+    % 如果要实现空格，可以用以下的方法
+
+    % 1. 1em（相当于字体中M的宽度）因为M是所有字母中最宽的那一个，所以便用M作为基准
+    a\quad b
+
+    % 2. 2em
+    a \qquad b
+
+    % 3. 约为1/6个em
+    a\,b a\thinspace b
+
+    % 0.5个em
+    a\enspace b
+
+    % 直接一个正常空格的宽度
+    a\ b
+
+    % 硬空格
+    a~b
+
+    % 详细规定空格距离（用\kern \hskip \hspace等指令）
+    a\kern 1pc b % 1pc=12pt=4.218mm
+
+    a\kern -1em b % 则把后面的所有东西往前平移一个em距离
+
+    a\hskip 1em b
+
+    a\hspace{35pt} b
+
+    %占位宽度
+    a\hphantom{xyz}b %即中间有个xyz宽度的占位空格
+
+    % 弹性宽度（占据整个横向空间）
+    a\hfill b
+
+
+
+    \section{\LaTeX 控制符}
+    \# 
+    \$ 
+    \% 
+    \& 
+
+    % 打出{}
+    \{\} 
+
+    % 打出~
+    \~{} 
+
+    % 打出_
+    \_{} 
+
+    % 打出^
+    \^{} 
+
+    % 打出\
+    \textbackslash
+
+
+
+    \section{排版符号}
+    % section符号
+    \S
+
+    % idk what is this
+    \P
+
+    % sword
+    \dag
+
+    % fence
+    \ddag
+
+    % copyright符号
+    \copyright
+
+    % 英镑符号
+    \pounds
+
+
+
+
+    \section{\TeX 标志符号}
+    \TeX {} \LaTeX{} \LaTeXe{}
+    % 如果是\XeLaTeX的话就需要额外导入{xltxtra}宏包，包括XeLaTeX的一些标志符号
+    \section{引号}
+    % 这里直接按引号的那个键并不能区分左右引号，所以这里改用~`'键位
+    ` ' ``  ''
+
+    % 直接用‘“键位打出来的符号
+    ' ' " "
+
+    % 如果是中文的字符引号的话就不用在意了
+    “” “” ‘’
+    \section{连字符}
+    % 长度为1
+    -
+
+    % 长度为2
+    --
+
+    % 长度为3
+    ---
+    \section{非英文字符}
+    %
+    \oe ~ \OE ~ \ae ~ \AE ~ \aa ~ \AA ~ \o ~ \O ~ \l ~ \L ~ \ss ~ \SS ~ !` ?`
+
+    \section{重音符号}
+    \`o % 重音符号：重音符号（\`）放在字母（o）之前，表示 Grave（重音符）。
+    \'o % 重音符号：重音符号（\'）放在字母（o）之前，表示 Acute（锐音符）。
+    \^o % 重音符号：重音符号（\^）放在字母（o）之前，表示 Circumflex（抑扬符）。
+    \"o % 重音符号：重音符号（\"）放在字母（o）之前，表示 Umlaut（分音符）。
+    \~o % 重音符号：重音符号（\~）放在字母（o）之前，表示 Tilde（波浪符）。
+    \=o % 重音符号：重音符号（\=）放在字母（o）之前，表示 Macron（长音符）。
+    \.o % 重音符号：重音符号（\.）放在字母（o）之前，表示 Dot（点音符）。
+    \u{o} % 重音符号：u 上加 breve（短音符）。
+    \v{o} % 重音符号：v 上加 caron（ háček）。
+    \H{o} % 重音符号：H 上加 double acute（双重音符）。
+    \r{o} % 重音符号：r 上加 ring（圆圈符）。
+    \c{o} % 重音符号：c 下加 cedilla（锐音符）。
+    \d{o} % 重音符号：d 下加 dot-under（下圆点符）。
+    \b{o} % 重音符号：b 下加 bar-under（下横线符）。
+    \t{o} % 重音符号：t 上加 tie-over（横线符）。
+    \H{o} % 重音符号：H 上加 Hungarian umlaut（匈牙利分音符）。
+
+
+\end{document}

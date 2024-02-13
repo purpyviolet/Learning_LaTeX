@@ -1,0 +1,84 @@
+%导言区
+\documentclass[12pt]{article}% 在文章类型之前可以设置
+
+\usepackage{ctex}
+
+
+%一般来说在文档中多次设置字体格式会不太方便，所以一般是将一些字体格式组合设置成一条命令，统一执行
+\newcommand{\myfont}{\textit{\textbf{\textsf{Fancy Text}}}}
+%正文区
+\begin{document}
+
+% 字体族设置（罗马字体、无衬线字体、打字机字体）在{}内的语句即为你想要设置字体的一些语句
+% 注意用法，\textrm、\textsf、\texttt
+\textrm{Roman Family} \textsf{Sans Serif Family} \texttt{Typewriter Family} 
+
+%设置后续字体为哪种字体
+% 省去了大括号，可以用于大段落的字体设置
+\rmfamily Roman Family  {\sffamily Sans Serif Family} {\ttfamily Typewriter Family}
+
+\ttfamily
+大本大人：“我想想。虽说只要愿意，它可以通往任何地方……但若希望停下的话，这里就是终点哦。
+虽然球每次都能回到我手中，但每次描绘出的轨迹却是不同的。
+所以，就算人们渴望重来，也是不可能实现的。因为，每条道路都有不同的结果。
+如果，这是梦的话……你们想醒来吗？
+
+“愿望绝对不是毫无意义的哦。”
+希望你们不要太被梦所囚禁就好。
+因为不管是去这边，还是去那边，意义都不会改变。
+会去向哪里呢，那些孩子们……
+
+% 字体系列设置（粗细、宽度）
+\sffamily
+\textmd{Medium Series} \textbf{Boldface Series}%前者正常，后者加粗
+{\mdseries Medium Series}{\bfseries Boldface Series}
+
+大本大人：“这里没有名字……之前说过了吧，这里仅仅只是一个空间而已。”
+但是，他们并没有告诉你任何最重要的事情。那个家……那个城市，到底在做什么。
+你啊，必须去寻找。而且，必须要知道。最后……必须要做出选择。
+这里，既非梦境亦非现实。
+啊啊，那是为了让世界回归正轨……世界框架开始扭曲了，所以才会发生这种现象。
+在你们看来不可思议的事情，其实并没有什么让人难以理解的理由哦。
+意义什么的，根本就没有……只是，产生了这么一个现象而已。就像是，东西烧完了会留下灰吧，就是这种感觉的事。
+
+% 字体形状设置（直立、斜体、伪斜体、小型大写）
+\textup{Upright Shape} \textit{Italic Shape}
+\textsl{Slanted Shape} \textsc{Small Cap Shape}
+
+{\upshape Upright Shape}{\itshape Italic Shape}{\slshape Slanted Shape}{\scshape Small Caps Shape}
+
+
+% 中文字体设置
+{\songti 宋体} \quad {\heiti 黑体} \quad {\fangsong 仿宋}
+\quad {\kaishu 楷书}
+
+{\songti
+莹：“世界在回归正轨……您的意思是，至今为止的世界都是错误的？”
+大本大人：“为什么要祭祀座敷童，这其中的理由你考虑过吗？”
+所有的世界都保持着平衡。尽管如此，若想要将幸福留住，还是会令某处产生扭曲。
+扭曲不断累积，迟早会爆发。就像堤坝坏了，水会流出来一样。}
+
+% 字体大小
+{\tiny Hello}\\ % 两条斜杠代表换行
+{\scriptsize Hello}
+{\footnotesize Hello}
+{\small Hello}
+{\normalsize Hello}
+{\large Hello}
+{\Large Hello}
+{\LARGE Hello}
+{\huge Hello}
+{\Huge Hello}
+
+
+% ctex宏包用于中文字号设置命令
+\zihao{-0} 昙花
+\zihao{5} 梦末
+
+\zihao{4} 这个大小是四号
+\zihao{-4} 这个大小是小四
+\zihao{5} 这个大小是五号
+
+\myfont
+
+\end{document}
